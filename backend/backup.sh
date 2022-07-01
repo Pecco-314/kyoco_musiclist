@@ -1,0 +1,1 @@
+pg_dump kyoco -f sql/backup.sql

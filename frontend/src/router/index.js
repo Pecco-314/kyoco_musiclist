@@ -15,6 +15,7 @@ export default new Router({
     {
       path: '/musicList',
       component: MusicList,
+      name: 'musiclist',
       meta: {
         title: '元宵的歌单'
       }
@@ -22,6 +23,7 @@ export default new Router({
     {
       path: '/about',
       component: About,
+      name: 'about',
       meta: {
         title: '关于元宵'
       }

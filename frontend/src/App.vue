@@ -2,7 +2,12 @@
   <div id="app">
     <el-container class="container">
       <el-header>
-        <el-menu default-active="about" mode="horizontal" class="navmenu" router>
+        <el-menu
+          :default-active="activeIndex"
+          mode="horizontal"
+          class="navmenu"
+          router
+        >
           <el-menu-item index="musiclist">
             <i class="el-icon-notebook-2"></i>
             <span slot="title">歌单</span>
@@ -13,7 +18,6 @@
           </el-menu-item>
         </el-menu>
       </el-header>
-      <!-- <MusicList></MusicList> -->
       <router-view />
     </el-container>
   </div>
@@ -21,7 +25,12 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  computed: {
+    activeIndex () {
+      return this.$router.currentRoute.name
+    }
+  }
 }
 </script>
 
@@ -34,6 +43,6 @@ body {
   align-items: center;
 }
 .navmenu {
-  background-color: rgb(0, 0, 0, 0)!important;
+  background-color: rgb(0, 0, 0, 0) !important;
 }
 </style>

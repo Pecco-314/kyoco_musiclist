@@ -1,6 +1,13 @@
 <template>
-  <el-dialog v-drag :visible.sync="visible" title="管理歌单" @close="close">
+  <el-dialog
+    v-drag
+    :visible.sync="visible"
+    title="管理歌单"
+    @close="close"
+    class="my-dialog"
+  >
     <el-input
+      class="my-input"
       v-model="password"
       placeholder="请输入密码"
       show-password

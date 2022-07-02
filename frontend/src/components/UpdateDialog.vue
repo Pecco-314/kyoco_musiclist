@@ -1,11 +1,17 @@
 <template>
-  <el-dialog v-drag :visible.sync="visible" :title="title" @close="close">
+  <el-dialog
+    v-drag
+    :visible.sync="visible"
+    :title="title"
+    @close="close"
+    class="my-dialog"
+  >
     <el-form ref="musicform" :model="musicform" label-width="80px">
       <el-form-item label="歌曲名称">
-        <el-input v-model="musicform.name"></el-input>
+        <el-input class="my-input" v-model="musicform.name"></el-input>
       </el-form-item>
       <el-form-item label="歌曲描述">
-        <el-input v-model="musicform.description"></el-input>
+        <el-input class="my-input" v-model="musicform.description"></el-input>
       </el-form-item>
       <el-form-item label="歌手">
         <MusicTagCollection
@@ -28,7 +34,12 @@
         title="确定要删除吗？"
         icon-color="red"
       >
-        <el-button slot="reference" type="danger" v-show="this.music.id !== null">删除歌曲</el-button>
+        <el-button
+          slot="reference"
+          type="danger"
+          v-show="this.music.id !== null"
+          >删除歌曲</el-button
+        >
       </el-popconfirm>
       <el-button type="primary" @click="submit">确定</el-button>
     </span>

@@ -45,4 +45,11 @@ body {
 .navmenu {
   background-color: rgb(0, 0, 0, 0) !important;
 }
+.my-dialog .el-dialog {
+  max-width: 600px;
+  width: 80vw;
+}
+.my-input input {
+  font-size: 16px;
+}
 </style>

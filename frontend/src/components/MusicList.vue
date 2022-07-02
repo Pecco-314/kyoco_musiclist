@@ -16,7 +16,7 @@
           v-model="input"
           placeholder="搜索歌曲..."
           prefix-icon="el-icon-search"
-          class="lineinput"
+          class="lineinput my-input"
         ></el-input>
         <el-skeleton
           :rows="6"
@@ -200,12 +200,5 @@ export default {
   position: fixed;
   right: 5%;
   bottom: 5%;
-}
-input {
-  font-size: 16px !important;
-}
-.el-dialog {
-  max-width: 600px !important;
-  width: 80vw !important;
 }
 </style>

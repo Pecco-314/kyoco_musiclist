@@ -1,5 +1,5 @@
 <template>
-  <el-dialog v-drag :visible.sync="visible" title="管理员登录" @close="close">
+  <el-dialog v-drag :visible.sync="visible" title="管理歌单" @close="close">
     <el-input
       v-model="password"
       placeholder="请输入密码"

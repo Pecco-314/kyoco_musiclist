@@ -7,14 +7,13 @@ import MusicList from '@/components/MusicList'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
   routes: [
     {
       path: '/',
-      redirect: '/musicList'
+      redirect: '/musiclist'
     },
     {
-      path: '/musicList',
+      path: '/musiclist',
       component: MusicList,
       name: 'musiclist',
       meta: {

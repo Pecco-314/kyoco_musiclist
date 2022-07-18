@@ -1,10 +1,12 @@
 from dao import Dao
 from util import Util
 from constants.code import Code
+from redis import StrictRedis
 
 class Service:
     def __init__(self):
         self.dao = Dao()    
+        self.redis = StrictRedis(host='localhost', port=6379, db=0)
 
     def get_musiclist(self, keyword):
         musiclist = self.dao.get_musiclist()
@@ -33,15 +35,24 @@ class Service:
                         break
         return {'code': Code.OK, 'data': l1 + l2 + l3 + l4}
 
-    def login(self, session, login_data):
+    def login(self, session, ip, login_data):
         PASSWORD = 'e9b2bab43d002e46f8c07f8d61c95906387941d88aca594f9bb727eea549b02f'
+        MAX_TRY = 5
         password = login_data['password']
         session.permanent = True
-        if Util.password(password) == PASSWORD:
+        ip_try = self.redis.get(f'ip_try_{ip}')
+        ip_try = 0 if ip_try is None else int(ip_try)
+        if ip_try == MAX_TRY:
+            return {'code': Code.MAX_PASSWORD_TRY, 'message': '密码尝试次数过多，请稍后再试'}
+        elif Util.password(password) == PASSWORD:
             session['login'] = True
+            self.redis.delete(f'ip_try_{ip}')
             return {'code': Code.OK, 'message': '登录成功'}
         else:
-            return {'code': Code.WRONG_PASSWORD, 'message': '密码错误'}
+            ip_try += 1
+            self.redis.set(f'ip_try_{ip}', ip_try, ex=3600)
+            return {'code': Code.WRONG_PASSWORD, 'message': '密码错误', 'data': {'countTry': ip_try}}
+                
 
     def ping(self, session):
         return {'code': Code.OK, 'data': { 'isLogin': bool(session.get('login')) } }

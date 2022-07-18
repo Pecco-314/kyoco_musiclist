@@ -2,7 +2,7 @@
   <el-dialog
     v-drag
     :visible.sync="visible"
-    title="管理歌单"
+    title="管理员登录"
     @close="close"
     class="my-dialog"
   >
@@ -12,7 +12,7 @@
       placeholder="请输入密码"
       show-password
     ></el-input>
-    <div class="wrong-password-hint" v-show="wrongPassword">密码错误</div>
+    <div class="wrong-password-hint" v-show="countTry">{{errorMessage}}</div>
     <span slot="footer" class="dialog-footer">
       <el-button type="primary" @click="login">确 定</el-button>
     </span>
@@ -29,7 +29,14 @@ export default {
   data () {
     return {
       password: '',
-      wrongPassword: false
+      countTry: 0,
+      maxTry: 5,
+      errorMessage: ''
+    }
+  },
+  computed: {
+    remainTry () {
+      return this.maxTry - this.countTry
     }
   },
   methods: {
@@ -40,12 +47,17 @@ export default {
           if (response.data.code === Code.OK) {
             this.$emit('login')
             this.close()
+            this.countTry = 0
             this.$message({
               message: '登录成功',
               type: 'success'
             })
           } else if (response.data.code === Code.WRONG_PASSWORD) {
-            this.wrongPassword = true
+            this.countTry = response.data.data.countTry
+            this.errorMessage = `密码错误（你还可以尝试${this.remainTry}次）`
+          } else if (response.data.code === Code.MAX_PASSWORD_TRY) {
+            this.countTry = this.maxTry
+            this.errorMessage = response.data.message
           } else {
             Util.error(this, response.data)
           }
@@ -54,7 +66,8 @@ export default {
     },
     close () {
       this.password = ''
-      this.wrongPassword = false
+      this.countTry = 0
+      this.errorMessage = ''
       this.$emit('close')
     }
   },

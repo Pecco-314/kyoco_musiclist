@@ -26,8 +26,9 @@ def musiclist():
     
 @app.route('/api/login', methods = ['POST'])
 def login():
+    ip = request.remote_addr
     login_data = request.json
-    return jsonify(service.login(session, login_data))
+    return jsonify(service.login(session, ip, login_data))
 
 @app.route('/api/ping')
 def ping():

@@ -1,6 +1,6 @@
 <template>
   <el-card class="music-card">
-    <div class="music-name-and-desc">
+    <div class="music-name-and-desc" @click="onCopyMusic(music.name)">
       <span class="music-name">{{ music.name }}</span>
       <br />
       <span class="music-desc">{{ music.description }}</span>
@@ -21,6 +21,10 @@
 
 <script>
 import MusicTag from './MusicTag'
+import VueClipboard from 'vue-clipboard2'
+import Vue from 'vue'
+Vue.use(VueClipboard)
+
 export default {
   name: 'MusicCard',
   data () {
@@ -46,6 +50,14 @@ export default {
     },
     onClickEdit () {
       this.$emit('editClicked', this.music)
+    },
+    onCopyMusic (name) {
+      this.$copyText(name).then(
+        () => this.$message({
+          message: `已将“${name}”复制到剪切板`,
+          type: 'success'
+        })
+      )
     }
   },
   props: ['music', 'isLogin'],

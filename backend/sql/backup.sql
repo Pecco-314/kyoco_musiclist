@@ -887,7 +887,7 @@ COPY public.music_tag (id, music_id, tag_name, tag_type) FROM stdin;
 420	381	Fine乐团	singer
 421	102	银临	singer
 422	102	古风	normal
-423	382	三无	singer
+424	382	三无Marblue	singer
 \.
 
 
@@ -902,7 +902,7 @@ SELECT pg_catalog.setval('public.music_id_seq', 382, true);
 -- Name: music_tags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.music_tags_id_seq', 423, true);
+SELECT pg_catalog.setval('public.music_tags_id_seq', 424, true);
 
 
 --

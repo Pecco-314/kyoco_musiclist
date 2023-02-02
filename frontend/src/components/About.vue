@@ -3,12 +3,12 @@
     <div class="kyoco">
       <div class="kyoco-avatar-wrapper">
         <el-avatar
-          src="/static/images/avatar.jpg"
+          src="/static/images/avatar2.jpg"
           class="kyoco-avatar"
         ></el-avatar>
       </div>
       <div class="introduction">
-        哎呦才不是幼稚鬼呐，也叫元宵、元宝，是Bilibili唱见电台区主播<br />
+        哎呦才不是幼稚鬼呐，也叫元宵、元宝，是在Bilibili直播的个人势歌势虚拟主播<br />
         直播时间：周二到周日18:00<br />
         个人空间：<el-link
           href="https://space.bilibili.com/27368927/"

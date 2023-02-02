@@ -32,19 +32,31 @@
             @editClicked="editMusic"
           />
         </div>
-        <el-button
-          icon="el-icon-plus"
-          type="primary"
-          circle
-          class="add-music-button"
-          @click="onAddMusicButtonClicked"
-        ></el-button>
+        <el-tooltip class="item" effect="dark" content="打乱列表" placement="left" hide-after=1000>
+          <el-button
+            icon="el-icon-shuffle"
+            type="success"
+            circle
+            class="shuffle-button"
+            @click="onShuffleButtonClicked"
+          ></el-button>
+        </el-tooltip>
+        <el-tooltip class="item" effect="dark" content="添加歌曲" placement="left" hide-after=1000>
+          <el-button
+            icon="el-icon-plus"
+            type="primary"
+            circle
+            class="add-music-button"
+            @click="onAddMusicButtonClicked"
+          ></el-button>
+        </el-tooltip>
       </el-main>
 </template>
 
 <script>
 
 import axios from 'axios'
+import { shuffle, MersenneTwister19937 } from 'random-js'
 import MusicCard from './MusicCard'
 import LoginDialog from './LoginDialog'
 import UpdateDialog from './UpdateDialog'
@@ -62,7 +74,9 @@ export default {
       isLogin: false,
       loginDialogVisible: false,
       updateDialogVisible: false,
-      currentMusic: new Music()
+      currentMusic: new Music(),
+      shuffleTooltipVisible: false,
+      addTooltipVisible: false
     }
   },
   methods: {
@@ -80,6 +94,11 @@ export default {
           }
         })
         .catch(error => Util.error(this, error))
+    },
+    onShuffleButtonClicked () {
+      let engine = MersenneTwister19937.autoSeed()
+      shuffle(engine, this.musiclist)
+      this.$forceUpdate()
     },
     updateInput (input) {
       this.input = input
@@ -198,7 +217,14 @@ export default {
 }
 .add-music-button {
   position: fixed;
+  font-size: 20px;
   right: 5%;
-  bottom: 5%;
+  bottom: 6%;
+}
+.shuffle-button {
+  position: fixed;
+  font-size: 20px;
+  right: 5%;
+  bottom: 15%;
 }
 </style>

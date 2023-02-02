@@ -1,0 +1,16 @@
+{
+  "id": "3878238",
+  "name": "project",
+  "font_family": "element-icons",
+  "css_prefix_text": "el-icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "14401809",
+      "name": "shuffle",
+      "font_class": "shuffle",
+      "unicode": "e68f",
+      "unicode_decimal": 59023
+    }
+  ]
+}

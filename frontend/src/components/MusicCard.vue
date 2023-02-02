@@ -52,9 +52,10 @@ export default {
       this.$emit('editClicked', this.music)
     },
     onCopyMusic (name) {
-      this.$copyText(name).then(
+      const content = `点歌 ${name}`
+      this.$copyText(content).then(
         () => this.$message({
-          message: `已将“${name}”复制到剪切板`,
+          message: `已将“${content}”复制到剪切板`,
           type: 'success'
         })
       )

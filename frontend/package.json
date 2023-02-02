@@ -14,10 +14,12 @@
     "@soerenmartius/vue3-clipboard": "^0.1.2",
     "axios": "^0.27.2",
     "element-ui": "^2.15.9",
+    "random-js": "^2.1.0",
+    "randomjs": "^1.0.1",
     "v-drag": "^3.0.7",
     "vue": "^2.5.2",
     "vue-clipboard2": "^0.3.3",
-    "vue-cookies": "^1.8.1",
+    "vue-cookies": "^1.8.2",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

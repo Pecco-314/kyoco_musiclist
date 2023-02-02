@@ -124,6 +124,11 @@ ALTER TABLE ONLY public.music_tag ALTER COLUMN id SET DEFAULT nextval('public.mu
 --
 
 COPY public.music (id, name, description) FROM stdin;
+433	还是分开	
+436	new boy	
+438	如一	
+440	小夜子	中文版
+443	你就不要想起我	
 306	恶作剧	
 311	字和句关于你	
 316	珊瑚海	
@@ -150,16 +155,60 @@ COPY public.music (id, name, description) FROM stdin;
 375	啷个哩个啷	
 380	季风	
 382	刺猬法则	
+383	杀破狼	
+384	非酋	
+389	纸鸢与少年	
+394	晴空一尾鲤	
+399	发如雪	
+404	爱殇	
+405	少侠不用刀	
+406	如果当时	
+407	啵唧	
+408	阿拉斯加海湾	
+411	靠近一点点	
+416	歌乐天	
+418	是风动	
+419	不要忘记我爱你	
+423	吵架歌	
+425	石头歌	
+427	我不配	
+428	Ring Ring Ring	
+429	我要你	
+430	画沙	
+448	阴天快乐	
+449	匆匆那年	
+450	干物女	
+452	慢冷	
+456	一直很安静	
+458	想自由	
+459	讲真的	
+460	小手拉大手	
+461	雨天	
+464	小岁月太着急	
+467	蠢货	
+468	可能	
+469	迷雾中	
+470	那个女孩	
+434	说谎	
+17	东西	
+437	失恋阵线联盟	
+439	樱花草	
+441	一个人想着一个人	
 2	瞬	超温柔
 1	了	
 3	囍	
 4	藏	
 8	〇	
+444	幻听	
 14	鱼仔	
 13	大鱼	
 15	海底	
 25	赤伶	
+451	听海	
+30	懒人	主播人设
 29	后来	
+453	风吹过八千里	
+31	凉城	
 41	暖暖	
 35	不枉	
 42	姗姗	
@@ -176,10 +225,26 @@ COPY public.music (id, name, description) FROM stdin;
 36	不染	三无翻过的那个
 358	不负人间	
 362	童年	
+457	天后	
 372	余生皆是你	
 376	错位时空	
 381	呼吸决定	
-30	懒人	主播人设
+385	孤竹遗梦	
+390	你怎么说	
+465	致你	
+395	人间月	
+400	烟花易冷	
+409	沉默以对	
+412	 雨下一整晚	
+417	爱的飞行日记	
+420	恋爱困难少女	
+424	我要的飞翔	
+426	戒烟	
+32	听花	
+431	空心	
+462	夏末与童年	
+471	大喜	
+475	自娱自乐	
 5	画	
 6	寻	
 7	醉	
@@ -188,7 +253,6 @@ COPY public.music (id, name, description) FROM stdin;
 11	月球	
 12	田螺	
 16	大眠	
-17	东西	
 18	冬眠	
 19	飞机	
 20	苍蝇	
@@ -198,15 +262,17 @@ COPY public.music (id, name, description) FROM stdin;
 24	归寻	
 27	红豆	
 28	骗我	
-31	凉城	
-32	听花	
 33	听闻	
 34	故梦	
 37	离人	
 38	笑看	
 39	幸甚	
 40	借我	
+435	喜剧之王	
+153	大碗宽面	电晕你不负责哟~
 295	爱你	
+442	单向箭头	
+445	素颜	
 62	mojito	
 76	处处吻	塑料粤语不过还是可爱的
 83	关键词	假音魔鬼
@@ -228,9 +294,25 @@ COPY public.music (id, name, description) FROM stdin;
 367	同花顺	主播超喜欢
 373	宁夏	
 377	不问天	
+386	云水逢	
+391	诗话小镇	
+396	说客	
+401	伯虎说	
+410	小城夏天	
+413	彩虹	
+421	左手右手	
+432	空空	
+454	我们俩	
+463	心墙	
+466	惊鸿一面	
+472	心愿便利贴	
+476	漠河舞厅	
 123	小白船	阴间歌曲，慎点
 148	百万个吻	节日限定
-153	大碗宽面	电晕你不负责哟~
+446	你要的全拿走	
+473	可能否	
+44	酒家	
+477	当我唱起这首歌	
 47	栖凰	
 53	晴天	
 54	温泉	
@@ -255,14 +337,19 @@ COPY public.music (id, name, description) FROM stdin;
 368	岁月神偷	
 374	引路的风筝	
 378	爱啦啦	
+387	小棋童	
+392	湘桥月	
+49	琴师	
+397	盗墓笔记·十年人间	
+402	下山	
 225	单身狗之歌	没事别点，何必扎自己
+414	洋葱	
+422	枝江	
 242	生日快乐歌	生日的宝贝快乐呀
 43	虚传	
-44	酒家	
 45	芊芊	
 46	参商	
 48	青丝	
-49	琴师	
 50	情歌	
 51	嚣张	
 52	过客	
@@ -272,9 +359,10 @@ COPY public.music (id, name, description) FROM stdin;
 58	遇见	
 59	遇到	
 60	走马	
+82	飞机场	
 63	小青呱	
 64	小情歌	
-65	花雨落	
+89	红叶寺	
 69	难生恨	
 70	你之外	
 71	拜无忧	
@@ -283,21 +371,14 @@ COPY public.music (id, name, description) FROM stdin;
 75	百利甜	
 77	长安忆	
 78	丁香花	
-79	鱼玄机	
 81	多情岸	
-82	飞机场	
-85	故人泪	
 86	女儿情	
 88	红尘嗔	
-89	红叶寺	
 91	将厌离	
-93	竹枝词	
 94	锦中客	
 98	衩头凤	
-99	寄明月	
 100	猜不透	
 101	典狱司	
-103	虞兮叹	
 110	贺新婚	
 111	浮生辞	
 112	笑笑生	
@@ -324,38 +405,31 @@ COPY public.music (id, name, description) FROM stdin;
 149	不安小姐	
 150	吴江锦时	
 154	独享甜蜜	
-156	大城小爱	
 160	浮生未歇	
 164	南郭先生	
 165	感官先生	
 169	怀梦之泽	
-170	海绵宝宝	
 171	理想三旬	
-172	浪人琵琶	
 173	美好事物	
 174	你啊你啊	
 175	牛奶香槟	
 176	伴宅日记	
 181	群居动物	
 186	山止川行	
-190	棠梨煎雪	
-192	无人之岛	
 193	南部小城	
 194	外婆的话	
 197	我爱学习	
-199	星空剪影	
 200	香水有毒	
-201	秋殇别恋	
 202	新星计划	
 204	恶人是我	
 206	烟雨行舟	
 61	葬歌	
 68	云与海	
 66	外婆桥	
-67	安河桥	
+156	大城小爱	
 80	对玄机	
 87	红昭愿	
-84	广寒宫	
+192	无人之岛	
 90	红蜻蜓	
 96	僵尸舞	
 152	等你下课	
@@ -407,8 +481,20 @@ COPY public.music (id, name, description) FROM stdin;
 72	不谓侠	
 107	孽海记	
 102	流光记	
+99	寄明月	
+93	竹枝词	
+85	故人泪	
+103	虞兮叹	
+172	浪人琵琶	
+201	秋殇别恋	
+65	花雨落	
+170	海绵宝宝	
+84	广寒宫	
+447	给我一首歌的时间	
+190	棠梨煎雪	
+199	星空剪影	
+79	鱼玄机	
 207	烟火莲灯	
-208	盐甜汽水	
 209	骁浪吾归	
 211	云烟成雨	
 212	第三人称	
@@ -417,6 +503,7 @@ COPY public.music (id, name, description) FROM stdin;
 224	辞九门回忆	
 235	这就是爱吗	
 236	醒不来的梦	
+208	盐甜汽水	
 264	倒霉孩子养成记	
 281	大小姐和大少爷的反派生涯	
 283	Summertime	
@@ -470,7 +557,6 @@ COPY public.music (id, name, description) FROM stdin;
 246	小丑的品格	
 245	最长的电影	
 243	山楂树之恋	
-241	湖光水色调	
 238	燃尽人间色	
 237	你好陌生人	
 232	你曾是少年	
@@ -485,6 +571,12 @@ COPY public.music (id, name, description) FROM stdin;
 268	山外小楼夜听雨	
 369	成全	
 379	飞云之下	
+388	马步谣	
+393	狐言	
+398	白石溪	
+241	湖光水色调	
+403	出山	
+415	晚婚	
 \.
 
 
@@ -540,8 +632,6 @@ COPY public.music_tag (id, music_id, tag_name, tag_type) FROM stdin;
 63	26	忘川风华录	normal
 64	26	古风	normal
 65	66	任然	singer
-66	67	宋冬野	singer
-67	67	民谣	normal
 68	76	杨千嬅	singer
 69	76	粤语	normal
 70	80	任然	singer
@@ -551,7 +641,6 @@ COPY public.music_tag (id, music_id, tag_name, tag_type) FROM stdin;
 74	87	王梓钰	singer
 75	87	音阕诗听	normal
 76	87	古风	normal
-77	84	花僮	singer
 78	90	小虎队	singer
 80	96	洛天依	singer
 81	96	言和	singer
@@ -888,6 +977,182 @@ COPY public.music_tag (id, music_id, tag_name, tag_type) FROM stdin;
 421	102	银临	singer
 422	102	古风	normal
 424	382	三无Marblue	singer
+425	99	SING女团	singer
+426	383	JS	singer
+427	383	仙剑奇侠传	normal
+428	384	薛明媛	singer
+429	384	朱贺	singer
+430	385	双笙	singer
+431	385	徐梦圆	singer
+432	386	南瑾天	singer
+433	386	玄觞	singer
+434	386	古风	normal
+435	93	双笙	singer
+436	93	古风	normal
+437	387	不纯君	singer
+438	387	古风	normal
+439	387	墨明棋妙	normal
+440	388	双笙	singer
+441	388	古风	normal
+442	389	子弥	singer
+443	389	古风	normal
+444	390	邓丽君	singer
+445	391	潇梦临	singer
+446	391	CRITTY	singer
+447	392	银临	singer
+448	392	鸦青	singer
+449	392	古风	normal
+450	393	河图	singer
+451	393	洛天依	singer
+452	394	hanser	singer
+453	394	乐正绫	singer
+454	394	著小生zoki	normal
+455	394	古风	normal
+457	396	谣君	singer
+458	396	音阙诗听	normal
+459	396	新乐尘符	normal
+460	85	麦小兜	singer
+461	103	闻人听書	singer
+462	103	古风	normal
+463	49	音频怪物	singer
+464	49	古风	normal
+465	395	三无Marblue	singer
+466	393	古风	normal
+467	397	李常超	singer
+469	397	古风	normal
+470	398	洛天依	singer
+471	398	古风	normal
+473	398	纯白	normal
+474	397	纯白	normal
+475	399	周杰伦	singer
+476	398	乐正绫	singer
+477	400	周杰伦	singer
+478	172	胡66	singer
+479	172	单色凌	normal
+480	172	古风	normal
+481	201	马跃展	singer
+482	241	古风	normal
+483	401	伯爵Johnny	singer
+485	401	古风	normal
+486	65	任然	singer
+487	65	古风	normal
+488	402	要不要买菜	singer
+489	402	古风	normal
+490	403	花粥	singer
+491	403	王胜男	singer
+492	403	古风	normal
+493	404	小时姑娘	singer
+494	404	古风	normal
+495	405	双笙	singer
+496	406	许嵩	singer
+497	407	hanser	singer
+498	225	慕寒	singer
+499	408	菲道尔	singer
+500	409	吕口口	singer
+501	410	LBI利比	singer
+502	411	梁心颐	singer
+503	412	周杰伦	singer
+504	413	周杰伦	singer
+505	414	杨宗纬	singer
+506	415	江蕙	singer
+507	416	三无Marblue	singer
+508	417	周杰伦	singer
+509	417	杨瑞代	singer
+510	418	银临	singer
+511	418	河图	singer
+512	418	古风	normal
+513	419	张碧晨	singer
+514	420	ChiliChill	singer
+515	421	杨沛宜	singer
+516	421	喜羊羊与灰太狼	normal
+517	422	信陵	singer
+518	422	A-SOUL	normal
+519	423	汪苏泷	singer
+520	423	Hari	singer
+521	424	许飞	singer
+522	425	三无Marblue	singer
+523	426	李荣浩	singer
+524	427	周杰伦	singer
+525	428	S.H.E.	singer
+526	429	张杰	singer
+527	156	王力宏	singer
+528	170	汪苏泷	singer
+529	32	麦小兜	singer
+530	32	古风	normal
+531	430	袁咏琳	singer
+532	430	周杰伦	singer
+533	431	光泽	singer
+534	432	陈粒	singer
+536	79	古风	normal
+537	433	张叶蕾	singer
+538	208	洛少爷	singer
+539	434	林宥嘉	singer
+540	435	李荣浩	singer
+541	17	林俊呈	singer
+542	153	吴亦凡	singer
+543	153	电音	normal
+544	82	徐良	singer
+545	436	朴树	singer
+546	437	草蜢	singer
+547	438	不是花火呀	singer
+548	438	小田音乐社	normal
+549	439	Sweety	singer
+550	89	小残	singer
+551	89	古风	normal
+553	440	初音未来	singer
+554	441	曾沛慈	singer
+555	190	银临	singer
+556	190	古风	normal
+557	442	双笙	singer
+558	199	蓝心羽	singer
+559	443	田馥甄	singer
+560	444	许嵩	singer
+561	445	许嵩	singer
+562	446	胡彦斌	singer
+563	447	周杰伦	singer
+564	448	陈奕迅	singer
+565	449	王菲	singer
+566	450	洛天依	singer
+567	450	乐正绫	singer
+568	450	z新豪	normal
+569	451	张惠妹	singer
+570	30	洛天依	singer
+571	30	空气凝Klean	normal
+572	452	梁静茹	singer
+573	453	苏星婕	singer
+574	454	郭顶	singer
+576	31	任然	singer
+577	456	阿桑	singer
+578	457	陈势安	singer
+579	458	林宥嘉	singer
+580	459	李袁杰	singer
+581	459	 曾惜	singer
+582	460	梁静茹	singer
+583	79	洛天依	singer
+584	84	丸子呦	singer
+585	192	任然	singer
+586	461	孙燕姿	singer
+587	462	三无Marblue	singer
+588	463	林俊杰	singer
+589	464	 单色凌	singer
+590	465	王赫野	singer
+591	466	黄龄	singer
+592	466	许嵩	singer
+593	466	男女合唱	normal
+594	467	喻言	singer
+595	468	李怡然同学	singer
+596	469	糯米Nomi	singer
+597	470	陶喆	singer
+598	470	卢广仲	singer
+599	471	泠鸢yousa	singer
+600	472	元若蓝	singer
+601	472	吴忠明	singer
+602	473	木小雅	singer
+604	44	小阿七	singer
+605	475	金志文	singer
+606	476	柳爽	singer
+607	477	小贱	singer
+608	477	星弟	singer
 \.
 
 
@@ -895,14 +1160,14 @@ COPY public.music_tag (id, music_id, tag_name, tag_type) FROM stdin;
 -- Name: music_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.music_id_seq', 382, true);
+SELECT pg_catalog.setval('public.music_id_seq', 477, true);
 
 
 --
 -- Name: music_tags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.music_tags_id_seq', 424, true);
+SELECT pg_catalog.setval('public.music_tags_id_seq', 608, true);
 
 
 --
